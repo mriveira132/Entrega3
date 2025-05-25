@@ -2,6 +2,8 @@ package uniandes.edu.co.epsandes.modelo;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 import jakarta.validation.constraints.NotBlank;
 import java.util.Date;
 
@@ -22,8 +24,9 @@ public class Cita {
     @NotBlank
     private String ipsId;
     
-    @NotBlank
+    @Field("servicioId")
     private String servicioSaludId;
+
     
     private String ordenServicioId;
 
