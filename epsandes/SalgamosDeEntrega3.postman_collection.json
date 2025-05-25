@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "46d76f5a-6568-4f64-8e99-ed60ef56cd22",
+		"name": "SalgamosDeEntrega3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41972428"
+	},
+	"item": [
+		{
+			"name": "RF1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": \"CONSULTA_GENERAL\",\r\n    \"nombre\": \"Consulta Médico General\",\r\n    \"descripcion\": \"Consulta básica con médico general\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/servicios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RF2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nit\": \"900123456\",\r\n    \"nombre\": \"Hospital San Juan\",\r\n    \"direccion\": \"Calle 100 #15-30\",\r\n    \"telefono\": \"3001234567\",\r\n    \"serviciosIds\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RF4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroRegistroMedico\": \"12345\",\r\n    \"tipoDocumento\": \"CC\",\r\n    \"numeroDocumento\": \"987654321\",\r\n    \"nombre\": \"Dr. Juan Pérez\",\r\n    \"especialidad\": \"Cardiología\",\r\n    \"ipsIds\": [\"ips1\", \"ips2\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RF5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipoDocumento\": \"CC\",\r\n    \"numeroDocumento\": \"123456789\",\r\n    \"nombre\": \"María García\",\r\n    \"fechaNacimiento\": \"1990-01-01T00:00:00.000Z\",\r\n    \"direccion\": \"Calle 123\",\r\n    \"telefono\": \"3001234567\",\r\n    \"tipoAfiliado\": \"CONTRIBUYENTE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/afiliados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"afiliados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RF6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"afiliadoId\": \"683252c7c6ba6352a83c9cb6\",\r\n    \"medicoId\": \"68325262c6ba6352a83c9cb5\",\r\n    \"servicioSaludId\": \"68325760591ce895ccea790a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ordenes-servicio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes-servicio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RF7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"2024-06-15T00:00:00.000Z\",\r\n    \"hora\": \"10:00\",\r\n    \"afiliadoId\": \"683252c7c6ba6352a83c9cb6\",\r\n    \"medicoId\": \"68325262c6ba6352a83c9cb5\",\r\n    \"ipsId\": \"683256157674b05a6a0fbf65\",\r\n    \"servicioSaludId\": \"68325760591ce895ccea790a\",\r\n    \"ordenServicioId\": \"6832585a8b15723f09852724\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/citas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"citas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RF7-2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/servicios/68325760591ce895ccea790a/disponibilidad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servicios",
+						"68325760591ce895ccea790a",
+						"disponibilidad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "porquenosirves",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
